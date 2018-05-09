@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>3-10-2-2</title>
+	<script src="jquery.js" type="text/javascript"></script>
+ 	<script type="text/javascript">
+ 		$(function(){
+ 			//对地址框进行操作
+ 			$("#address").focus(function(){				//地址框获取鼠标焦点
+ 				var txt_value = $(this).val();
+ 				if(txt_value == "请输入邮箱地址"){
+ 					$(this).val("");
+ 				}
+ 			});
+ 			$("#address").blur(function(){				//地址框失去鼠标焦点
+ 				var txt_value = $(this).val();
+ 				if(txt_value == ""){
+ 					$(this).val("请输入邮箱地址");
+ 				}
+ 			});
+ 			//对密码框进行操作
+ 			$("#password").focus(function(){
+ 				var txt_value = $(this).val();
+ 				if(txt_value == "请输入邮箱密码"){
+ 					$(this).val("");
+ 				}
+ 			});
+ 			$("#password").blur(function(){
+ 				var txt_value = $(this).val();
+ 				if(txt_value == ""){
+ 					$(this).val("请输入邮箱密码");
+ 				}
+ 			});
+ 		});
+ 	</script>
+</head>
+<body>
+    <input type="text" id="address" value="请输入邮箱地址"/>   <br/><br/>
+	<input type="text" id="password" value="请输入邮箱密码"/>  <br/><br/>
+	<input type="button" value="登录"/>
+</body>
+</html>
+
+ 
